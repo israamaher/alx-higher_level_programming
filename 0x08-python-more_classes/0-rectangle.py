@@ -3,5 +3,4 @@
 
 class Rectangle:
     """rectangle object"""
-    def ___int___(self):
     pass
