@@ -3,5 +3,5 @@
 
 
 def append_write(filename="", text=""):
-    with open(filename, mode="a+", encodeing="UTF8") as f:
+    with open(filename, mode="a+", encoding="UTF8") as f:
         return f.write(text)
