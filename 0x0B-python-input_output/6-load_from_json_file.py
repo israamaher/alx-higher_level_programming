@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-import json
 """loads an object from json file"""
-
+import json
 
 def load_from_json_file(filename):
     """
@@ -9,5 +8,5 @@ def load_from_json_file(filename):
     -filename: name of file
     -Return: an object
     """
-    with open(filename, mode='r', encoding='utf-8') as f:
-        return(json.load(f))
+    with open(filename) as f:
+        return json.load(f)
