@@ -11,4 +11,4 @@ class Student:
 
     def to_json(self):
         """ to json"""
-        return self.__dect__
+        return self.__dict__
