@@ -5,11 +5,11 @@ from base import Base
 class Rectangle(Base):
     """class Rectangle that inherits from Base"""
     def __init__(self, width, height, x=0, y=0, id=None):
-            super().__init__(id)
-            self.width = width
-            self.height = height
-            self.x = x
-            self.y = y
+        super().__init__(id)
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
 
     @property
     def width(self):
@@ -17,8 +17,8 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, value):
-         self.validator("width", value)
-         self.__width = value
+        self.validator("width", value)
+        self.__width = value
 
     @property
     def height(self):
@@ -26,8 +26,8 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, value):
-         self.validator("height", value)
-         self.__height = value
+        self.validator("height", value)
+        self.__height = value
 
     @property
     def x(self):
@@ -55,7 +55,7 @@ class Rectangle(Base):
             raise ValueError("{} must be > 0".format(name))
         if (name == 'x' or name == 'y') and value < 0:
             raise ValueError("{} must be >= 0".format(name))
-    
+
     def area(self):
         """return area of rectangle"""
         return (int(self.width) * int(self.height))
@@ -64,12 +64,14 @@ class Rectangle(Base):
         """ print the rectangle """
         print('\n'*self.y, end="")
         for i in range(self.height):
-            row ="".join(" " * self.x + "#" * self.width)
+            row = "".join(" " * self.x + "#" * self.width)
             print(row)
 
     def __str__(self):
         """ return rectangle """
-        return  "[{}] ({}) {}/{} - {}/{}".format(type(self).__name__, self.id, self.x, self.y, self.width, self.height)
+         return "[{}] ({}) {}/{} - {}/{}".format(
+            type(self).__name__, self.id, self.x, self.y,
+            self.width, self.height)
 
     def update(self, id=None, width=None, height=None, x=None, y=None):
         """ update the argument """
