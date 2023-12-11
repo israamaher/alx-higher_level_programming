@@ -2,6 +2,7 @@
 """Class Rectangle"""
 from base import Base
 
+
 class Rectangle(Base):
     """class Rectangle that inherits from Base"""
     def __init__(self, width, height, x=0, y=0, id=None):
@@ -69,9 +70,9 @@ class Rectangle(Base):
 
     def __str__(self):
         """ return rectangle """
-         return "[{}] ({}) {}/{} - {}/{}".format(
-            type(self).__name__, self.id, self.x, self.y,
-            self.width, self.height)
+        return "[{}] ({}) {}/{} - {}/{}".format(
+                type(self).__name__, self.id, self.x, self.y,
+                self.width, self.height)
 
     def update(self, id=None, width=None, height=None, x=None, y=None):
         """ update the argument """
@@ -85,3 +86,4 @@ class Rectangle(Base):
             self.x = x
         if y is not None:
             self.y = y
+
