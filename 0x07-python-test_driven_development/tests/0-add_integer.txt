@@ -1,0 +1,10 @@
+add integer module
+==================
+using add_integer
+----------------
+import function 
+	>>> add_integer = ___import___("0-add_integer").add_integer
+test one integer
+	>>> add_integer(2)
+	100
+test
