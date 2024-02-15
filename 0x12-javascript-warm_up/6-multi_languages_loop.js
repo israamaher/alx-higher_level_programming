@@ -1,5 +1,5 @@
 #!/usr/bin/node
-const words = ['C is fun', 'Python is cool', 'Javascript is amazing'];
-for (const word in words) {
-  console.log(words[word]);
+const args = ['C is fun', 'Python is cool', 'JavaScript is amazing'];
+for (const arg in args) {
+  console.log(args[arg]);
 }
